@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lois Cousine Kitchen – Fresh Homemade Meals Delivered</title>
+  <meta name="description" content="Order fresh homemade burgers, cakes, pastries, and snacks from Lois Cousine Kitchen with fast delivery and premium quality meals."/>
+  <meta name="keywords" content="homemade meals, fresh burgers, cakes and pastries, online food delivery, snacks near me, Nigerian food"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="cart-notification" id="cartNotification">✅ Added to cart!</div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">LC</span>
+      <span class="logo-text">Lois Cousine <span class="logo-accent">Kitchen</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="menu.html" class="nav-link">Menu</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="track.html" class="nav-link">Track Order</a></li>
+      <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <a href="signup.html" class="btn-primary nav-cta">Order Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orbs">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>Fresh · Fast · Delicious</span>
+      </div>
+      <h1 class="hero-title">
+        Homemade Meals<br/>
+        <em class="hero-italic">Delivered</em> to You
+      </h1>
+      <p class="hero-sub" style="text-align: center;">Experience the taste of authentic Nigerian cuisine, decadent cakes, crispy burgers and heavenly pastries — all made fresh and delivered fast.</p>
+      <div class="hero-cta-row">
+        <a href="menu.html" class="btn-primary btn-xl">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.51l1.38-5.49H5.21"/></svg>
+          Order Now
+        </a>
+        <a href="menu.html" class="btn-ghost btn-xl">Explore Menu ↗</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-avatars">
+          <div class="p-avatar">😊</div>
+          <div class="p-avatar">😋</div>
+          <div class="p-avatar">🤩</div>
+          <div class="p-avatar">😍</div>
+        </div>
+        <div class="proof-text">
+          <strong>5,200+ happy customers</strong>
+          <span>⭐ 4.9 average rating</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-plate-wrap">
+        <div class="plate-glow"></div>
+        <div class="plate-circle">
+          <div class="plate-emoji">🍔</div>
+        </div>
+        <div class="float-chip chip-a">🎂 Cakes <strong>₦3,500</strong></div>
+        <div class="float-chip chip-b">🚀 <strong>30 min</strong> delivery</div>
+        <div class="float-chip chip-c">⭐ 4.9 rated</div>
+        <div class="float-chip chip-d">🥐 Pastries <strong>₦800</strong></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats-bar">
+    <div class="container">
+      <div class="stats-row">
+        <div class="hstat"><span class="hstat-n">5K+</span><span class="hstat-l">Happy Customers</span></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-n">50+</span><span class="hstat-l">Menu Items</span></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-n">4.9★</span><span class="hstat-l">Avg Rating</span></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-n">&lt;45min</span><span class="hstat-l">Delivery Time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="cats-section">
+  <div class="container">
+    <div class="cats-scroll">
+      <button class="cat-chip active" data-cat="all">All Items</button>
+      <button class="cat-chip" data-cat="burgers">🍔 Burgers</button>
+      <button class="cat-chip" data-cat="cakes">🎂 Cakes</button>
+      <button class="cat-chip" data-cat="snacks">🍟 Snacks</button>
+      <button class="cat-chip" data-cat="pastries">🥐 Pastries</button>
+      <button class="cat-chip" data-cat="nigerian">🍲 Nigerian</button>
+      <button class="cat-chip" data-cat="drinks">🥤 Drinks</button>
+      <button class="cat-chip" data-cat="sandwich">🥪 Sandwiches</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED MEALS -->
+<section class="section" id="featured">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">⭐ Featured Today</div>
+      <h2 class="sec-title">Chef's Picks</h2>
+      <p class="sec-sub">Freshly prepared meals our customers love most</p>
+    </div>
+    <div class="food-grid" id="featuredGrid"></div>
+    <div class="sec-action">
+      <a href="menu.html" class="btn-outline">View All Menu Items →</a>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR DISHES -->
+<section class="section bg-tinted" id="popular">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">🔥 Trending Now</div>
+      <h2 class="sec-title">Most Ordered</h2>
+    </div>
+    <div class="popular-row" id="popularGrid"></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">💎 Our Promise</div>
+      <h2 class="sec-title">Why Lois Cousine Kitchen?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-ico">🧑‍🍳</div>
+        <h3>Homemade Quality</h3>
+        <p>Every meal crafted fresh with premium Nigerian and international ingredients — no shortcuts.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>From kitchen to door in under 45 minutes. Real-time tracking on every order.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico">💳</div>
+        <h3>Secure Payments</h3>
+        <p>Paystack, Flutterwave, or cash on delivery. Multiple options, 100% secure.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico">🎯</div>
+        <h3>Always Fresh</h3>
+        <p>Zero preservatives. Zero frozen shortcuts. Prepared the moment you order.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico">📱</div>
+        <h3>Easy Ordering</h3>
+        <p>Order in 3 clicks. Track delivery. Get notified every step of the way.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico">🌟</div>
+        <h3>5-Star Service</h3>
+        <p>Over 5,000 satisfied customers with a 4.9 average rating. We care deeply.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-vis">
+        <div class="about-card-main">
+          <div class="ac-emoji">👩‍🍳</div>
+          <div class="ac-tag t1">🍔 Made with Love</div>
+          <div class="ac-tag t2">⭐ 4.9 Stars</div>
+          <div class="ac-tag t3">🚀 45min Delivery</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="sec-label">Our Story</div>
+        <h2 class="sec-title">Born From a<br/><em>Passion for Food</em></h2>
+        <p>Lois Cousine Kitchen was founded in 2023 from one simple belief: everyone deserves a delicious, homemade meal — regardless of how busy life gets.</p>
+        <p style="margin-top:1rem">From our signature puff-puff recipe passed down three generations, to our contemporary gourmet burgers and elegant celebration cakes, each dish tells a story of care, culture, and craft.</p>
+        <div class="about-metrics">
+          <div class="am"><span>2019</span><small>Est.</small></div>
+          <div class="am"><span>50+</span><small>Dishes</small></div>
+          <div class="am"><span>5K+</span><small>Customers</small></div>
+          <div class="am"><span>4.9★</span><small>Rating</small></div>
+        </div>
+        <a href="menu.html" class="btn-primary">Order Your Meal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery-section">
+  <div class="container">
+    <div class="delivery-card">
+      <div class="del-content">
+        <h2>🏍 Fast Delivery Across Lagos</h2>
+        <p>We deliver to Lagos Island, Victoria Island, Lekki, Surulere, Ikeja and more. Order before 8PM for same-day delivery.</p>
+        <div class="del-steps">
+          <div class="ds"><div class="ds-n">1</div><span>Place Order</span></div>
+          <div class="ds-arrow">→</div>
+          <div class="ds"><div class="ds-n">2</div><span>We Cook Fresh</span></div>
+          <div class="ds-arrow">→</div>
+          <div class="ds"><div class="ds-n">3</div><span>Out for Delivery</span></div>
+          <div class="ds-arrow">→</div>
+          <div class="ds"><div class="ds-n">4</div><span>Enjoy! 🎉</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">💬 Testimonials</div>
+      <h2 class="sec-title">What Customers Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="rv-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The best puff-puff I've ever tasted! Crispy outside, fluffy inside, delivered hot within 30 minutes. Lois Cousine Kitchen is absolutely phenomenal."</p>
+        <div class="rv-author"><div class="rv-av">AC</div><div><strong>Adaeze C.</strong><small>Lagos Island</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="rv-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Ordered a birthday cake — it was stunning AND delicious. Moist layers, perfect decoration. My daughter was over the moon. Will definitely order again!"</p>
+        <div class="rv-author"><div class="rv-av">KO</div><div><strong>Kemi O.</strong><small>Victoria Island</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="rv-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The cheeseburger is INSANE. Juicy, fresh, incredible sauce. I've tried Uber Eats and all those apps — nothing compares to Lois Cousine Kitchen quality."</p>
+        <div class="rv-author"><div class="rv-av">TM</div><div><strong>Tunde M.</strong><small>Lekki</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="rv-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Jollof rice, egusi, fried plantain — all perfectly seasoned like my grandmother's cooking. So grateful this service exists. Fast, fresh, affordable!"</p>
+        <div class="rv-author"><div class="rv-av">FI</div><div><strong>Fatima I.</strong><small>Surulere</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP CTA -->
+<section class="wa-section">
+  <div class="container">
+    <div class="wa-card">
+      <div class="wa-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div class="wa-text">
+        <h3>Prefer WhatsApp?</h3>
+        <p>Chat directly with us and place your order instantly!</p>
+      </div>
+      <a id="whatsappBtn" href="https://wa.me/2348026823212?text=Hello%20Lois%20Cousine%20Kitchen!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="btn-wa">Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:1rem">
+          <span class="logo-mark">LC</span>
+          <span class="logo-text">Lois <span class="logo-accent">Cousine</span></span>
+        </div>
+        <p>Fresh homemade meals delivered with love. Quality in every bite, joy in every order.</p>
+        <div class="socials">
+          <a href="#" class="soc">FB</a>
+          <a href="#" class="soc">IG</a>
+          <a href="#" class="soc">TW</a>
+          <a href="https://wa.me/2348026823212" class="soc">WA</a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="track.html">Track Order</a></li>
+          <li><a href="login.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="menu.html">Burgers & Sandwiches</a></li>
+          <li><a href="menu.html">Cakes & Pastries</a></li>
+          <li><a href="menu.html">Nigerian Dishes</a></li>
+          <li><a href="menu.html">Snacks & Drinks</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Contact Us</h4>
+        <ul>
+   <li><a href="mailto:angelinainnovates@gmail.com">📩 angelinainnovates@gmail.com</a></li>
+   <li><a href="tel:+2348026823212">📞 +2348026823212</a></li>
+          <li>⏰ 7AM – 10PM Daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Angelima Innovates. All rights reserved.</p>
+      <div class="pay-logos">
+        <span class="pay-badge">Bank Transfer</span>
+        <span class="pay-badge">Paystack</span>
+        <span class="pay-badge">Flutterwave</span>
+        <span class="pay-badge">Cash on Delivery</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

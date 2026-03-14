@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Admin Dashboard — Lois Cousine  Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      <div class="nav-logo"><span class="logo-mark">AK</span><span class="logo-text" style="color:var(--text)">Admin</span></div>
+    </div>
+    <nav class="admin-nav">
+      <a href="#" class="active" onclick="showAdminTab(event,'dashboard')"><span class="nav-icon">📊</span><span>Dashboard</span></a>
+      <a href="#" onclick="showAdminTab(event,'orders')"><span class="nav-icon">📦</span><span>Orders</span></a>
+      <a href="#" onclick="showAdminTab(event,'products')"><span class="nav-icon">🍽</span><span>Products</span></a>
+      <a href="#" onclick="showAdminTab(event,'addproduct')"><span class="nav-icon">➕</span><span>Add Product</span></a>
+      <a href="index.html"><span class="nav-icon">🌐</span><span>View Site</span></a>
+      <a href="login.html"><span class="nav-icon">🔒</span><span>Logout</span></a>
+    </nav>
+  </aside>
+  <main class="admin-main">
+
+    <!-- DASHBOARD -->
+    <div id="admin-dashboard" class="tab-content active">
+      <div class="admin-topbar">
+        <h1>Dashboard</h1>
+        <span style="font-size:0.875rem;color:var(--text-muted)">Lois Cousine  Kitchen Admin Panel</span>
+      </div>
+      <div class="stats-cards">
+        <div class="stat-card"><div class="sc-icon">💰</div><div class="sc-val" id="statRevenue">₦0</div><div class="sc-label">Total Revenue</div></div>
+        <div class="stat-card"><div class="sc-icon">📦</div><div class="sc-val" id="statOrders">0</div><div class="sc-label">Total Orders</div></div>
+        <div class="stat-card"><div class="sc-icon">🍽</div><div class="sc-val" id="statItems">18</div><div class="sc-label">Menu Items</div></div>
+        <div class="stat-card"><div class="sc-icon">👥</div><div class="sc-val" id="statCustomers">0</div><div class="sc-label">Customers</div></div>
+      </div>
+      <div class="admin-table">
+        <div class="admin-table-header">
+          <span>Recent Orders</span>
+          <a href="#" onclick="showAdminTabById('orders')" style="font-size:0.875rem;color:var(--primary-light)">View All →</a>
+        </div>
+        <table>
+          <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Date</th></tr></thead>
+          <tbody id="ordersBody"><tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--text-muted)">No orders yet.</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div id="admin-orders" class="tab-content">
+      <div class="admin-topbar"><h1>All Orders</h1></div>
+      <div class="admin-table">
+        <div class="admin-table-header"><span>Order Management</span></div>
+        <table>
+          <thead><tr><th>Order ID</th><th>Customer</th><th>Phone</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Update</th></tr></thead>
+          <tbody id="ordersBodyFull"><tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-muted)">No orders yet.</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div id="admin-products" class="tab-content">
+      <div class="admin-topbar"><h1>Menu Products</h1></div>
+      <div class="admin-table">
+        <div class="admin-table-header"><span>All Products (18)</span></div>
+        <table>
+          <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Rating</th><th>Actions</th></tr></thead>
+          <tbody id="productsBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ADD PRODUCT -->
+    <div id="admin-addproduct" class="tab-content">
+      <div class="admin-topbar"><h1>Add New Product</h1></div>
+      <div class="admin-form">
+        <div id="productMsg"></div>
+        <form id="productForm">
+          <div class="form-row">
+            <div class="form-group"><label>Product Name *</label><input type="text" placeholder="e.g. Spicy Beef Burger" required/></div>
+            <div class="form-group"><label>Category *</label>
+              <select><option value="burgers">Burgers</option><option value="cakes">Cakes</option><option value="snacks">Snacks</option><option value="pastries">Pastries</option><option value="nigerian">Nigerian</option><option value="drinks">Drinks</option><option value="sandwich">Sandwiches</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Price (₦) *</label><input type="number" placeholder="2500" min="0" required/></div>
+            <div class="form-group"><label>Emoji Icon *</label><input type="text" placeholder="🍔" maxlength="5"/></div>
+          </div>
+          <div class="form-group"><label>Description *</label><textarea placeholder="Brief, appetizing description of the product..." required></textarea></div>
+          <div class="form-row">
+            <div class="form-group"><label>Badge (Optional)</label><input type="text" placeholder="Popular, New, Hot 🔥"/></div>
+            <div class="form-group"><label>Available</label><select><option>Yes</option><option>No</option></select></div>
+          </div>
+          <button type="submit" class="form-btn">✅ Save Product</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+<script>
+function showAdminTab(e, id) {
+  e.preventDefault();
+  showAdminTabById(id);
+  document.querySelectorAll('.admin-nav a').forEach(a => a.classList.remove('active'));
+  e.currentTarget.classList.add('active');
+}
+function showAdminTabById(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  const el = document.getElementById('admin-' + id);
+  if (el) el.classList.add('active');
+  // Populate orders full table
+  if (id === 'orders') {
+    const orders = JSON.parse(localStorage.getItem('ak_orders') || '[]');
+    const tb = document.getElementById('ordersBodyFull');
+    if (tb) {
+      const statusOptions = ['received','preparing','delivery','delivered'];
+      tb.innerHTML = orders.length ? orders.map(o => `
+        <tr>
+          <td><strong>${o.id}</strong></td>
+          <td>${o.name||'—'}</td>
+          <td>${o.phone||'—'}</td>
+          <td>${o.items?.length||0} item(s)</td>
+          <td style="color:var(--primary-light);font-weight:700">₦${(o.total||0).toLocaleString()}</td>
+          <td>${o.payment||'—'}</td>
+          <td><span class="status-badge status-${o.status}">${o.status}</span></td>
+          <td>
+            <select onchange="updateOrderStatus('${o.id}',this.value)" style="background:var(--dark3);border:1px solid var(--border);color:var(--text);padding:5px 8px;border-radius:6px;font-size:0.78rem;cursor:pointer">
+              ${statusOptions.map(s=>`<option value="${s}" ${o.status===s?'selected':''}>${s}</option>`).join('')}
+            </select>
+          </td>
+        </tr>`).join('') : '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-muted)">No orders yet.</td></tr>';
+    }
+  }
+}
+function updateOrderStatus(id, status) {
+  const orders = JSON.parse(localStorage.getItem('ak_orders') || '[]');
+  const idx = orders.findIndex(o => o.id === id);
+  if (idx > -1) { orders[idx].status = status; localStorage.setItem('ak_orders', JSON.stringify(orders)); }
+}
+</script>
+</body>
+</html>

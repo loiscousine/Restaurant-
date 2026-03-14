@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sign Up — Angel Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="auth-page">
+  <div class="hero-orbs"><div class="orb o1"></div><div class="orb o2"></div></div>
+  <div class="auth-card">
+    <div class="auth-logo"><a href="index.html" class="nav-logo" style="justify-content:center"><span class="logo-mark">AK</span><span class="logo-text">Angel <span class="logo-accent">Kitchen</span></span></a></div>
+    <h2 class="auth-title">Create Account</h2>
+    <p class="auth-sub">Join Angel Kitchen for fresh meals delivered fast</p>
+    <div id="authMsg"></div>
+    <form id="signupForm">
+      <div class="form-group"><label>Full Name</label><input type="text" id="name" placeholder="Your full name" required/></div>
+      <div class="form-group"><label>Email Address</label><input type="email" id="email" placeholder="hello@example.com" required/></div>
+      <div class="form-group"><label>Country</label>
+        <select id="country">
+          <option value="Nigeria">🇳🇬 Nigeria</option>
+          <option value="USA">🇺🇸 United States</option>
+          <option value="UK">🇬🇧 United Kingdom</option>
+          <option value="Canada">🇨🇦 Canada</option>
+          <option value="Ghana">🇬🇭 Ghana</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Password</label><input type="password" id="password" placeholder="Create password" required/></div>
+        <div class="form-group"><label>Confirm Password</label><input type="password" id="confirmPassword" placeholder="Confirm password" required/></div>
+      </div>
+      <button type="submit" class="form-btn">Create Account →</button>
+    </form>
+    <div class="auth-switch">Already have an account? <a href="login.html">Sign in</a></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

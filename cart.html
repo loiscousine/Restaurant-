@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Cart — Lois Cousine Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="cart-notification" id="cartNotification"></div>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-mark">LC</span><span class="logo-text">Lois<span class="logo-accent">Cousine</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="menu.html" class="nav-link">Menu</a></li>
+      <li><a href="track.html" class="nav-link">Track Order</a></li>
+      <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-btn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count" id="cartCount">0</span></a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div style="padding-top:var(--nav-h)">
+  <div class="container">
+    <div class="page-hero"><h1>🛒 My Cart</h1><p>Review your items before checkout</p></div>
+    <div id="cartWrap"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
